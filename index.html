@@ -59,6 +59,70 @@ footer{padding:24px 0;text-align:center;border-top:1px solid var(--line);color:#
 .float-wa{position:fixed;right:22px;bottom:20px;z-index:15;background:#19bd68;color:#06140b;font-weight:800;padding:13px 18px;border-radius:40px;box-shadow:0 8px 25px #0008}
 @media(max-width:800px){nav{display:none;position:absolute;top:75px;left:0;right:0;background:#0c0c0c;border-bottom:1px solid var(--line);padding:18px 5%;flex-direction:column;gap:16px}nav.open{display:flex}.menu{display:block}.nav>.btn{display:none}.hero-grid,.about-grid{grid-template-columns:1fr}.hero{padding:50px 0}.photo-wrap{width:min(390px,90%);margin-top:10px}.photo-wrap img{height:440px}.photo-tag{left:-12px}.cards{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr}.about-copy h2{text-align:left}}
 @media(max-width:520px){.brand{font-size:24px}.cards{grid-template-columns:1fr}.lead{font-size:16px}.social{gap:7px}.social a{font-size:13px}.photo-wrap img{height:390px}.photo-tag{bottom:18px}.contact-box{padding:25px 18px}.float-wa{right:12px;bottom:12px}}
+
+/* Reference-inspired compact black & gold layout */
+:root{--bg:#090909;--panel:#101010;--gold:#e6b83f;--gold2:#ffdc73;--line:rgba(230,184,63,.48)}
+body{background:#090909;line-height:1.38}
+.wrap{width:min(840px,91%)}
+header{height:51px;background:#090909}
+.nav{gap:14px}
+.brand{font-size:23px;letter-spacing:-.7px}
+.brand span{color:#e8b83f}
+nav{gap:28px;font-size:12px}
+nav a:first-child{color:var(--gold2);position:relative}
+nav a:first-child:after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:2px;background:var(--gold)}
+header .btn{padding:8px 16px;border-radius:7px;font-size:12px}
+.hero{padding:17px 0 12px;background:radial-gradient(ellipse at 78% 35%,rgba(177,128,22,.13),transparent 42%),linear-gradient(110deg,#090909,#11100d 65%,#080808)}
+.hero-grid{grid-template-columns:1.08fr .92fr;gap:25px;align-items:center}
+.eyebrow{font-size:10px;letter-spacing:2.4px;display:flex;align-items:center;gap:10px}
+.eyebrow:after{content:"";display:inline-block;width:90px;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
+h1{font-size:clamp(38px,5vw,52px);line-height:1.02;letter-spacing:-1.6px;margin:7px 0 5px;white-space:nowrap}
+.role{display:inline-flex;align-items:center;gap:9px;font-size:17px;line-height:1.1;margin:0 0 12px;padding:6px 14px 6px 8px;border:1px solid var(--gold);border-radius:4px;transform:skew(-10deg);background:linear-gradient(90deg,rgba(232,185,71,.14),transparent)}
+.role-icon{font-size:22px;color:var(--gold2)}
+.lead{font-size:14px;line-height:1.42;max-width:420px;margin:0 0 12px;color:#e1d8c7}
+.actions{gap:9px}
+.actions .btn{padding:8px 14px;font-size:13px;border-radius:7px}
+.social{gap:7px;margin:11px 0 0}
+.social a{padding:5px 10px;font-size:11px;color:#f5d16d}
+.highlights{display:none}
+.photo-wrap{max-width:310px;width:100%;height:300px;margin:0 auto 0;overflow:visible;padding:0;border:0;border-radius:0;background:none;box-shadow:none}
+.photo-wrap:before{content:"";position:absolute;z-index:0;right:9%;top:14%;width:72%;height:78%;border:1px solid #f0c13e;border-radius:22px;background:linear-gradient(145deg,#d5a21f,#65440a 65%,#211807);transform:skew(-10deg) rotate(-5deg);box-shadow:0 0 22px #0009}
+.photo-wrap img{position:absolute;z-index:1;right:0;bottom:0;width:100%;height:100%;object-fit:cover;object-position:center 22%;border-radius:0;mix-blend-mode:normal;clip-path:inset(0 0 0 0)}
+.photo-tag{display:none}
+section{padding:20px 0;border-top:1px solid rgba(232,185,71,.42)}
+.about-grid{grid-template-columns:.75fr 1.25fr;gap:30px}
+.logo-card{min-height:138px;padding:14px;border-radius:15px;background:radial-gradient(circle at center,rgba(232,185,71,.16),transparent 65%),#0b0b0b}
+.logo-mark{font-size:76px;color:#f4ca5d;text-shadow:0 2px 9px #d59b25}
+.logo-mark:after{content:"";display:block;width:76%;height:8px;margin:0 auto;border-bottom:3px solid #e6b83f;border-radius:50%;transform:skew(-18deg)}
+.logo-mark small{font-size:13px;letter-spacing:5px;margin-top:5px}
+.about-copy .eyebrow{font-size:10px}
+.about-copy h2{font-size:27px;margin:4px 0 5px}
+.about-copy p{font-size:13px;line-height:1.4;margin:6px 0}
+.about-copy .btn{padding:8px 14px;font-size:12px}
+.cards{gap:12px}
+.card{padding:18px;min-height:145px}
+@media(max-width:700px){
+ .wrap{width:91%}
+ header{height:54px}
+ .brand{font-size:21px}
+ nav{display:none;position:absolute;top:53px;left:0;right:0;background:#0c0c0c;padding:16px 5%;flex-direction:column;gap:15px}
+ nav.open{display:flex}
+ .menu{display:block}
+ .nav>.btn{display:none}
+ .hero{padding:25px 0 22px}
+ .hero-grid{grid-template-columns:1fr;gap:20px}
+ .hero-grid>div:first-child{order:1}
+ .photo-wrap{order:2;width:min(310px,85%);height:300px}
+ h1{font-size:clamp(38px,10vw,52px);white-space:normal}
+ .lead{font-size:14px}
+ .social{gap:6px}
+ .about-grid{grid-template-columns:1fr;gap:18px}
+ .logo-card{min-height:150px}
+ .about-copy h2{font-size:25px}
+ .cards{grid-template-columns:1fr}
+ section{padding:30px 0}
+}
+
 </style>
 </head>
 <body>
@@ -78,8 +142,8 @@ footer{padding:24px 0;text-align:center;border-top:1px solid var(--line);color:#
   <div class="wrap hero-grid">
     <div>
       <div class="eyebrow">Creative Design • Quality Printing</div>
-      <h1>Pradeep<br><span>Sahu</span></h1>
-      <div class="role">Professional Graphic Designer</div>
+      <h1>Pradeep <span>Sahu</span></h1>
+      <div class="role"><span class="role-icon">✒</span> Professional Graphic Designer</div>
       <p class="lead">नमस्ते! मैं प्रदीप साहू हूँ। PS Graphics के माध्यम से आपके बिजनेस और खास मौकों के लिए आकर्षक Graphic Design तैयार करता हूँ — शानदार लुक, साफ टेक्स्ट और प्रोफेशनल फिनिश के साथ।</p>
       <div class="actions">
         <a class="btn" href="https://wa.me/918528652783?text=Namaste%20PS%20Graphics%2C%20mujhe%20design%20order%20karna%20hai.">WhatsApp पर ऑर्डर करें</a>
