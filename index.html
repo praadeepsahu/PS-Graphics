@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="PS Graphics — Premium Graphic Design & Printing Studio. Flex, banner, poster, logo, visiting card and more.">
+  <title>PS Graphics | Premium Design Studio</title>
+  <style>
+    :root{--bg:#090909;--panel:#131313;--gold:#d8ad55;--gold2:#f3d58e;--muted:#b9b3a7;--white:#fff;--line:rgba(216,173,85,.22)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--white);font-family:Arial,"Noto Sans Devanagari",sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(9,9,9,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-size:25px;font-weight:900;letter-spacing:1px}.brand span{color:var(--gold)}
+    nav{display:flex;gap:25px;color:#ddd;font-size:14px}nav a:hover{color:var(--gold)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:5px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#17120a;font-weight:800;border:0;cursor:pointer}
+    .btn.outline{background:transparent;color:var(--gold2);border:1px solid var(--gold)}
+    .hero{padding:92px 0 78px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 80% 30%,rgba(216,173,85,.16),transparent 42%),linear-gradient(130deg,#090909,#15120c 65%,#090909)}
+    .hero:after{content:"PS";position:absolute;right:4%;bottom:-95px;font-size:clamp(220px,35vw,440px);font-weight:900;color:rgba(216,173,85,.045);line-height:1;pointer-events:none}
+    .eyebrow{color:var(--gold2);letter-spacing:3px;text-transform:uppercase;font-size:12px;font-weight:700}
+    h1{font-size:clamp(42px,7vw,78px);line-height:1.06;margin:18px 0;max-width:760px}
+    h1 em{font-style:normal;color:var(--gold2)}.hero p{color:#c8c1b4;max-width:600px;font-size:17px;margin:0 0 28px}
+    .actions{display:flex;gap:13px;flex-wrap:wrap}.trust{display:flex;gap:26px;flex-wrap:wrap;margin-top:48px;color:#c9c0b1;font-size:13px}.trust b{color:var(--gold2);font-size:18px;display:block}
+    section{padding:76px 0}.section-head{text-align:center;margin-bottom:38px}.section-head .eyebrow{margin-bottom:8px}.section-head h2{font-size:clamp(29px,4vw,43px);margin:0}.section-head p{color:var(--muted);margin:8px auto 0;max-width:620px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:linear-gradient(145deg,#171717,#101010);border:1px solid var(--line);padding:25px;border-radius:10px;transition:.2s}.card:hover{transform:translateY(-5px);border-color:rgba(243,213,142,.65)}
+    .icon{width:48px;height:48px;border-radius:9px;background:rgba(216,173,85,.12);display:grid;place-items:center;color:var(--gold2);font-size:24px;margin-bottom:15px}
+    .card h3{margin:0 0 7px;font-size:19px}.card p{margin:0;color:var(--muted);font-size:14px}
+    .about{background:#101010;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}.about-art{min-height:300px;border:1px solid var(--line);border-radius:14px;background:radial-gradient(circle at 50% 40%,rgba(216,173,85,.2),transparent 50%),linear-gradient(145deg,#1a1a1a,#080808);display:grid;place-items:center;text-align:center;padding:25px}
+    .monogram{font-size:100px;line-height:1;font-weight:900;color:var(--gold2);text-shadow:0 8px 35px rgba(216,173,85,.2)}.about-art small{display:block;letter-spacing:5px;color:#c7b58e;margin-top:10px}
+    .about h2{font-size:38px;line-height:1.15;margin:10px 0 15px}.about p{color:var(--muted)}
+    .portfolio-note{border:1px dashed rgba(216,173,85,.4);border-radius:10px;padding:25px;text-align:center;color:var(--muted);background:#111}
+    .portfolio-note strong{color:var(--gold2);display:block;font-size:19px;margin-bottom:5px}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{text-align:center;padding:22px}.num{font-size:34px;color:var(--gold);font-weight:900}
+    .contact{background:radial-gradient(ellipse at 50% 100%,rgba(216,173,85,.12),transparent 55%),#111;border-top:1px solid var(--line)}
+    .contact-box{max-width:760px;margin:auto;text-align:center;border:1px solid var(--line);border-radius:14px;padding:42px 25px;background:rgba(10,10,10,.75)}
+    .contact-box h2{font-size:clamp(30px,5vw,45px);margin:8px 0}.contact-box p{color:var(--muted)}
+    footer{padding:25px 0;border-top:1px solid var(--line);color:#918a7d;font-size:13px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .wa-float{position:fixed;right:20px;bottom:20px;z-index:30;background:#1fba65;color:#061b0e;border-radius:50px;padding:13px 18px;font-weight:800;box-shadow:0 8px 30px #0009}
+    @media(max-width:760px){nav{display:none}.grid{grid-template-columns:1fr 1fr}.about-grid{grid-template-columns:1fr;gap:25px}.steps{grid-template-columns:1fr}.hero{padding:72px 0 60px}.trust{gap:18px}}
+    @media(max-width:480px){.grid{grid-template-columns:1fr}.brand{font-size:22px}.nav{height:66px}.hero p{font-size:15px}.card{padding:21px}}
+  </style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="#home">PS <span>GRAPHICS</span></a>
+  <nav><a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#portfolio">Portfolio</a><a href="#contact">Contact</a></nav>
+  <a class="btn" href="https://wa.me/918528652783?text=Namaste%20PS%20Graphics%2C%20mujhe%20design%20banwana%20hai." target="_blank" rel="noopener">Order Now</a>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="wrap">
+  <div class="eyebrow">Creative Design • Quality Printing</div>
+  <h1>Ideas को दें<br><em>एक शानदार पहचान।</em></h1>
+  <p>आपके बिज़नेस और खास मौकों के लिए आकर्षक Graphic Design — शानदार लुक, साफ़ टेक्स्ट और प्रोफेशनल फिनिश के साथ।</p>
+  <div class="actions"><a class="btn" href="https://wa.me/918528652783?text=Namaste%20PS%20Graphics%2C%20mujhe%20design%20banwana%20hai." target="_blank" rel="noopener">WhatsApp पर ऑर्डर करें</a><a class="btn outline" href="#services">हमारी Services देखें</a></div>
+  <div class="trust"><div><b>Creative</b>Design Concepts</div><div><b>Print Ready</b>Artwork</div><div><b>Personal</b>Customer Support</div></div>
+</div></section>
+<section id="services"><div class="wrap">
+  <div class="section-head"><div class="eyebrow">What We Create</div><h2>हमारी Design Services</h2><p>आपकी ज़रूरत के अनुसार डिजिटल और प्रिंट डिज़ाइन।</p></div>
+  <div class="grid">
+    <article class="card"><div class="icon">▰</div><h3>Flex & Banner</h3><p>Shop banner, promotional flex और बड़े साइज़ के प्रिंट डिज़ाइन।</p></article>
+    <article class="card"><div class="icon">▧</div><h3>Poster & Flyer</h3><p>Festival, event, offer और business promotion के पोस्टर।</p></article>
+    <article class="card"><div class="icon">✦</div><h3>Logo Design</h3><p>आपके ब्रांड के लिए याद रहने वाली visual identity।</p></article>
+    <article class="card"><div class="icon">▤</div><h3>Visiting Card</h3><p>Professional visiting card और business stationery।</p></article>
+    <article class="card"><div class="icon">▣</div><h3>Social Media Design</h3><p>Instagram, Facebook और WhatsApp के लिए creatives।</p></article>
+    <article class="card"><div class="icon">✧</div><h3>Custom Design</h3><p>आपकी पसंद, साइज़ और कंटेंट के अनुसार खास डिज़ाइन।</p></article>
+  </div>
+</div></section>
+<section class="about" id="about"><div class="wrap about-grid">
+  <div class="about-art"><div><div class="monogram">PS</div><small>GRAPHICS</small></div></div>
+  <div><div class="eyebrow">About PS Graphics</div><h2>हर डिज़ाइन में<br><em style="color:var(--gold2)">Creativity और Quality</em></h2><p>PS Graphics में आपका स्वागत है। हमारा उद्देश्य आपके विचारों को आकर्षक और प्रभावशाली डिज़ाइन में बदलना है। छोटे बिज़नेस से लेकर खास आयोजनों तक — हर काम को ध्यान और रचनात्मकता के साथ तैयार किया जाता है।</p><a class="btn" href="https://wa.me/918528652783?text=Namaste%2C%20PS%20Graphics%20ke%20baare%20mein%20jaankari%20chahiye." target="_blank" rel="noopener">हमसे बात करें</a></div>
+</div></section>
+<section id="portfolio"><div class="wrap"><div class="section-head"><div class="eyebrow">Our Work</div><h2>Design Portfolio</h2><p>अपने बेहतरीन डिज़ाइन यहाँ जोड़ें और ग्राहकों को अपना काम दिखाएँ।</p></div>
+  <div class="portfolio-note"><strong>आपके Designs यहाँ दिखेंगे</strong>अपनी Flex, Banner, Poster और Logo की तस्वीरें इस वेबसाइट के portfolio section में जोड़ी जा सकती हैं।</div>
+</div></section>
+<section><div class="wrap"><div class="section-head"><div class="eyebrow">Simple Process</div><h2>ऑर्डर कैसे करें?</h2></div><div class="steps">
+  <div class="step"><div class="num">01</div><h3>WhatsApp करें</h3><p style="color:var(--muted)">अपना काम और ज़रूरी जानकारी भेजें।</p></div>
+  <div class="step"><div class="num">02</div><h3>Design तय करें</h3><p style="color:var(--muted)">साइज़, टेक्स्ट और पसंद साझा करें।</p></div>
+  <div class="step"><div class="num">03</div><h3>काम आगे बढ़ाएँ</h3><p style="color:var(--muted)">डिज़ाइन की जानकारी और डिलीवरी पर बात करें।</p></div>
+</div></div></section>
+<section class="contact" id="contact"><div class="wrap"><div class="contact-box"><div class="eyebrow">Let's Create Something Great</div><h2>अपना अगला डिज़ाइन<br><span style="color:var(--gold2)">आज ही शुरू करें।</span></h2><p>अपने डिज़ाइन की जानकारी WhatsApp पर भेजें।</p><a class="btn" href="https://wa.me/918528652783?text=Namaste%20PS%20Graphics%2C%20mujhe%20design%20banwana%20hai." target="_blank" rel="noopener">WhatsApp: 8528652783</a></div></div></section>
+</main>
+<footer><div class="wrap foot"><div>© <span id="year"></span> PS Graphics. All rights reserved.</div><div>Designed with creativity & care.</div></div></footer>
+<a class="wa-float" href="https://wa.me/918528652783?text=Namaste%20PS%20Graphics%2C%20mujhe%20design%20banwana%20hai." target="_blank" rel="noopener">WhatsApp ↗</a>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body></html>
